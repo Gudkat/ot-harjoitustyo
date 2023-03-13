@@ -7,3 +7,5 @@
 [komentorivi.txt](https://github.com/Gudkat/ot-harjoitustyo/blob/master/komentorivi.txt)
 
 ### Viikko 2
+
+### Viikko 3
