@@ -1,6 +1,7 @@
-# Ohjelmistotekniikka kurssin harjoitus
-## Tietoja omistajasta
-### Kuka
-Tämä repo on  **Timo Palonevan** ohjelmointitekniikka kurssin github repo
-### Missä opiskelee
-Opiskelija suorittaa kurssia ohjelmointitekniikka *Helsingin yliopistossa*
+# Ohjelmistotekniikka, harjoitustyö
+## Tehtävät
+### Viikko 1
+
+[gitlog.txt](https://github.com/Gudkat/ot-harjoitustyo/blob/master/gitlog.txt) 
+
+[komentorivi.txt](https://github.com/Gudkat/ot-harjoitustyo/blob/master/komentorivi.txt)
