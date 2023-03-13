@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Kurssi: Ohjelmistotekniikka, harjoitustyö
 ## Tehtävät
 ### Viikko 1
 
