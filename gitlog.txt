@@ -1,0 +1,122 @@
+commit be3c6b70c0c6b9820318eb377fac86a2225c0cab
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 14:04:13 2023 +0200
+
+    poistettiin file 1 ja uudelleen nimettiin file2 -> file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 90f945200dc2af869f98263957b80b1a8dca935f
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 14:01:12 2023 +0200
+
+    muutos tiedostoon file3
+
+ tiedostoja/file3 | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 6f08d42e47d9c1d367f811697193ab9c0798216e
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:58:23 2023 +0200
+
+    tehty kansio tiedostoja ja sinne tiedostot file1 file2 ja file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 96fac0f888b954ce4c5140ae1a7a8133c911158c
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:53:47 2023 +0200
+
+    muutokset tiedostoihin eka.txt ja kolmas.txt
+
+ eka.txt    | 2 +-
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 5d87ed7c67ba8241099994d3c6de1df6b0c7ab6f
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:52:37 2023 +0200
+
+    uudelleen nimettiin tiedosto.txt -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ab281600a50893429a8bae759b34f3df6b1f5538
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:49:15 2023 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit de1345f25d8faf0b7492427f93f570fe264a7770
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:46:29 2023 +0200
+
+    tiedosto.txt poistettu tekstiä ja lisätty tekstiä
+
+ tiedosto.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit fe30aae782c159d967cd8e1f426beab192586268
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:43:55 2023 +0200
+
+    tiedosto.txt tiedostoon tehty paljon muutoksia
+
+ tiedosto.txt | 679 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 679 insertions(+)
+
+commit 3d6043688f7fc9e26b80b810a8738e0bef2d75cb
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:36:49 2023 +0200
+
+    muutokset tiedostoihin toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 7de4322cfc75bae96abad326c220917fd1620836
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:30:29 2023 +0200
+
+    luotu stuff kansio ja sen sisälle jokin_tiedosto.txt
+
+ stuff/jokin_tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fd40c6461f364f111a096278065ce35be7993d1d
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:29:47 2023 +0200
+
+    lisätty kolmas tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ba055960320819275db8c4d6ab8442fd129c1e8c
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:27:48 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit d67f6fe6013eaf395b13912864f194f003e28b6e
+Author: Timo Paloneva <timo.paloneva@gmail.com>
+Date:   Mon Mar 13 13:20:40 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
