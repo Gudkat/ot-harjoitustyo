@@ -3,6 +3,7 @@
 
 ### Harjoitustyö
 [tuntikirjanpito](https://github.com/Gudkat/ot-harjoitustyo/blob/master/python-study-grouper/dokumentaatio/tuntikirjanpito.md)
+
 [vaatimusmäärittely](https://github.com/Gudkat/ot-harjoitustyo/blob/master/python-study-grouper/dokumentaatio/vaatimusmaarittely.md)
 
 ### Viikko 1
