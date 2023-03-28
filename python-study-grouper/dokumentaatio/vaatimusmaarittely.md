@@ -2,54 +2,60 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen tarkoitus on auttaa opiskelijoita löytämään samaa kurssia suorittavia opiskelijoita, joiden kanssa voi suorittaa kurssia yhdessä ja mahdollisesti tekemään harjoitustehtäviä ryhmissä. Sovellus on tarkoitettu käytettäväksi opiskelijoiden kesken, mutta myös opettajat voivat käyttää sovellusta opiskelijoiden ryhmäytymiseen.
+Sovelluksen tarkoitus on auttaa opiskelijoita löytämään samaa kurssia suorittavia opiskelijoita, joiden kanssa voi suorittaa kurssia yhdessä ja tehdä harjoitustehtäviä ryhmissä. Sovellusta käyttää _pääkäyttäjä_, joka voi luoda ryhmiä ja lisätä opiskelijoita ryhmiin. Opiskelija voi ilmoittautua ryhmähakuun _Guest_ tilassa.
 
 ## Käyttäjät
 
-Sovelluksella on ainoastaan yksi käyttäjärooli eli _opiskelija_. Myöhemmin sovellukseen saatetaan lisätä suuremmilla oikeuksilla varustettu _ryhmän omistaja_.
+Sovelluksella on aluksi yksi käyttäjärooli; _pääkäyttäjä_. _Pääkäyttäjällä_ on oikeudet hallinnoida ryhmiä ja käyttäjätilejä. Myöhemmin ohjelmaan saatetaan lisätä _Opiskelija_ käyttäjä ryhmä, jolla on oikeus nähdä omat ryhmät sekä liittyä että poistua ryhmistä, ja _RyhmänOmistaja_ rooli jolla on oikeus luoda ryhmiä ja hallinnoida itse luomiaan ryhmiä.
 
 ## Käyttöliittymäluonnos
 
-Sovellus koostuu kuudesta eri näkymästä. 
+Sovellus koostuu viidestä eri näkymästä. 
 
 ![](./kuvat/UI_sketch.jpg)
 
-Sovellus aukeaa kirjautumisnäkymään, josta voi joko kirjautua sisään tai siirtyä luomaan käyttäjätiliä. Kirjautumisen jälkeen käyttäjä pääsee kurssilistaukseen, josta voi joko valita kurssin tai siirtyä lisäämään uusia kursseja. Kurssivalinnan jälkeen käyttäjä näkee omassa ryhmässä olevien opiskelijoiden yhteystiedot.
+Sovellus aukeaa kirjautumisnäkymään, josta voi joko kirjautua sisään pääkäyttäjän tunnuksilla tai käytätä ohjelmaa _Guest_ tilassa. Mikäli käyttäjä valitsee _Guest_ tilan, hän pääsee näkymään, missä voi lisätä kurssin tunnuksen ja sähköpostiosoitteen, mikä vastaa ilmottautumista opintoryhmän etsijäksi. Mikäli ohjelman käyttäjä valitsee kirjautumisen alkutilassa, tämän jälkeen hänellä on status _pääkäyttäjä_. _Pääkäyttäjä_ pääsee kurssilistaukseen, josta voi joko valita tai poistaa kurssin sekä näkee ryhmää etsivien opiskelijoiden opiskelijoiden määrän. Kurssivalinnan jälkeen _pääkäyttäjä_ näkee kaikki kurssin opiskelijaryhmät. Tässä näkymässä _pääkäyttäjä_ voi luoda uuden ryhmän, tai lisätä opiskelijoita aiemmin luotuihin ryhmiin. Jos _pääkäyttäjä_ valitsee kurssilaisten lisäyksen, hän siirtyy listaukseen, missä näkyy ryhmättömät opiskelijat. 
 
 ## Perusversion tarjoama toiminnallisuus
 
 ### Ennen kirjautumista
 
-- Käyttäjän tulee luoda käyttäjätili, jotta hän voi kirjautua sisään sovellukseen.
-  - Kirjautumistunnus on sähköpostiosoite. 
-- Opiskelija voi kirjautua sisään sovellukseen. 
-  - Jos opiskelija on jo luonut käyttäjätilin, hän voi kirjautua sisään syöttämällä sähköpostiosoitteensa ja salasanan.
-  - Jos opiskelija ei ole vielä luonut käyttäjätiliä, hän voi siirtyä luomaan käyttäjätilin kirjautumisnäkymästä.
-    - Opiskelija voi valinnaisesti lisätä käyttäjätilin tietoihin myös telegram-tilin.
-- Jos käyttäjätiliä ei löydy tai salasana ei täsmää käyttäjätiliin, ohjelma ilmoittaa siitä käyttäjälle.
+- Opiskelija voi lisätä itsensä ohjelmaan ilman käyttäjätiliä.
+
+- Ohjelmalla on vain yksi käyttäjä, _pääkäyttäjä_, joten tunnusta ei tarvitse luoda vaan se on jo olemassa.
+- _Pääkäyttäjä_ voi kirjautua sisään sovellukseen. 
+- Jos kirjautumistunnukset eivät täsmää, ohjelma ilmoittaa siitä käyttäjälle.
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä näkee omat kurssit, joita hän on lisännyt.
-  - Käyttäjä voi lisätä uuden kurssin.
-  - Käyttäjä voi poistaa kurssin.
-  - Käyttäjä voi valita kurssin, 
-    - Ohjelma näyttää valitun kurssin opiskeluryhmässä olevien käyttäjien yhteystiedot.
-    - Käyttäjien yhteystiedot näkyvät vain oman ryhmän jäsenille.
+- _Pääkäyttäjä_ näkee kaikki kurssit, joihin on liitetty opiskelijoita.
+  - _Pääkäyttäjä_ voi poistaa kurssin.
+  - _Pääkäyttäjä_ voi valita kurssin, 
+    - Ohjelma näyttää valitun kurssin opintoryhmät.
+    - Jos valitaan ryhmä, ohjelma näyttää ryhmän jäsenten sähköpostiosoitteet.
+    - Käyttäjä voi luoda uuden ryhmän.
+    - Käyttäjä voi lisätä opiskelijoita ryhmiin.
 - Käyttäjä voi kirjautua ulos sovelluksesta.
-- Käyttäjä voi poistaa käyttäjätilinsä.
 
 ## Jatkokehitysideoita
 
 Perusversion jälkeen sovellukseen voisi lisätä seuraavia ominaisuuksia:
-- Käyttäjä voi lisätä itselle sopivat ajat yhdessäopiskeluun
-  - Ryhmänäkymään tulisi näkyville, milloin opiskelijat ovat vapaana yhdessäopiskeluun
+- Mahdollistaa opiskelijan ilmottautumaan ryhmähakuun verkon kautta.
+- Voidaan luoda uusia käyttäjäryhmiä
+  - _Opiskelija_
+    - _Opiskelija_ näkisi omat ryhmänsä ja voisi hallinnoida jäsenyyttään niissä
+          - _Opiskelija_ voi lisätä itselle sopivat ajat yhdessäopiskeluun ryhmähaussa
+  - _RyhmänOmistaja_
+    - _RyhmänOmistaja_ voi luoda ryhmiä
+      - Kurssin opettaja voi luoda ryhmiä opiskelijoille
+    - _RyhmänOmistaja_ voi hallinnoida omia ryhmiään    
+- Ryhmänäkymään tulisi näkyville, milloin opiskelijat ovat vapaana yhdessäopiskeluun
 - Erilaisten ryhmien luominen
   - Mahdollisuus valita kuinka monta opiskelijaa mahtuu mukaan ryhmään
   - Mahdollisuus luoda etäopiskeluryhmiä
   - Määrittely tavotteista ryhmälle
 - Ryhmien näkyminen opiskelijoille, jolloin opiskelija voi valita mihin ryhmään haluaa liittyä
-- Ryhmän luoja saa _ryhmän omistajan_ oikeudet
+- Ryhmän luoja saa _RyhmänOmistajan_ oikeudet
   - Ryhmän omistaja voi kutsua opiskelijoita ryhmään
   - Ryhmän omistaja voi poistaa ryhmän jäseniä
   - Jos ryhmän omistaja poistaa itsensä ryhmästä, ryhmän omistajaksi valitaan ryhmässä oleva opiskelija, joka on ollut ryhmässä kauimmin
