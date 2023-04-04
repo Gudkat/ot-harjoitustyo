@@ -1,18 +1,26 @@
-# Ohjelmistotekniikka, harjoitustyö
-## Tehtävät
+# StudyGrouper
 
-### Harjoitustyö
+## Dokumentaatio
+
 [tuntikirjanpito](https://github.com/Gudkat/ot-harjoitustyo/blob/master/python-study-grouper/dokumentaatio/tuntikirjanpito.md)
 
 [vaatimusmäärittely](https://github.com/Gudkat/ot-harjoitustyo/blob/master/python-study-grouper/dokumentaatio/vaatimusmaarittely.md)
 
-### Viikko 1
+[changelog](https://github.com/Gudkat/ot-harjoitustyo/blob/master/python-study-grouper/dokumentaatio/changelog.md)
 
-[gitlog.txt](https://github.com/Gudkat/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt) 
+### Ohjelman suorittaminen
 
-[komentorivi.txt](https://github.com/Gudkat/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+Ohjelma alustaa tietokannan komennolla 
 
-### Viikko 2
-[testikattavuusraportti.png](https://github.com/Gudkat/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti.png)
+poetry run invoke start
 
-### Viikko 3
+### Ohjelman testaus
+Ohjelman testit suoritetaan komennolla
+
+poetry run invoke test
+
+### Testikattavuusraportti
+
+Testikattavuusraportti luodaan komennolla
+
+poetry run invoke coverage-report
