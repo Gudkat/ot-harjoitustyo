@@ -9,3 +9,5 @@
 |29.3.|2|Referenssisovellukseen ja  dotenv kirjastoon tutustumista|
 |29.3.|1|Tietokannan suunnittelua ja ympäristön määrittelyä|
 |3.4.|3|Tietokannan ohjelmointia|
+|4.4.|4|Tietokannan testien rakenteen luomista ja ensimmäiset testit|
+|4.4.|1|Invoke komentojen luominen|
