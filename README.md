@@ -14,6 +14,8 @@ Ohjelma alustaa tietokannan komennolla
 
 poetry run invoke start
 
+Ohjelman käyttöliittymä ei lähde tällä komennolla käyntiin toistaiseksi (importtien kanssa tappelussa kului aikaa. sain apua pajasta mutta ei ollut aikaa osaamiseni puitteissa korjata tänään), se pitää avata ui kansiosta ui.py tiedoston kautta. Käyttöliittymässä toimii tällähetkellä kirjautmisnäkymä, siitä siirtyminen vierastilaan ja siellä kurssin ja sähköpostin lisääminen tietokantaan, ja tästä tilasta palaaminen kirjautumisnäkymään
+
 ### Ohjelman testaus
 Ohjelman testit suoritetaan komennolla
 
@@ -24,3 +26,4 @@ poetry run invoke test
 Testikattavuusraportti luodaan komennolla
 
 poetry run invoke coverage-report
+
