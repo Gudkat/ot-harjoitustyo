@@ -8,8 +8,6 @@ new_path = os.path.dirname((__file__)) + "/../"
 sys.path.append(new_path)
 
 import initialize_database
-     
-
 
 class TestDatabase(unittest.TestCase):
     def setUp(self):

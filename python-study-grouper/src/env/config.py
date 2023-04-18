@@ -11,4 +11,4 @@ except FileNotFoundError:
     print(".env file not found")
 
 DATABASE_NAME = getenv("DATABASE") or "db.sqlite3"
-DATABASE_PATH = path.join(directory, "data", DATABASE_NAME)
+DATABASE_PATH = path.join(directory, "Data", DATABASE_NAME)

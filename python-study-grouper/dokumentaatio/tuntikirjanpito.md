@@ -11,3 +11,8 @@
 |3.4.|3|Tietokannan ohjelmointia|
 |4.4.|4|Tietokannan testien rakenteen luomista ja ensimmäiset testit|
 |4.4.|1|Invoke komentojen luominen|
+|14.4.|2|Tkinterin opettelua ja käyttöliittymän aloittelua|
+|17.4.|4|Tkinterin opettelua ja käyttöliittymän jatkamista|
+|18.4.|2|Ihmettelyä miten importit toimii kansioiden välillä|
+|18.4.|5|Tkinterin opettelua käyttöliittymän jatkamista|
+|yht.|35|
