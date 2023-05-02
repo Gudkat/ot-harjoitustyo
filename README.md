@@ -14,7 +14,7 @@ Ohjelma alustaa tietokannan komennolla
 
 poetry run invoke start
 
-Ohjelman käyttöliittymä ei lähde tällä komennolla käyntiin toistaiseksi (importtien kanssa tappelussa kului aikaa. sain apua pajasta mutta ei ollut aikaa osaamiseni puitteissa korjata tänään), se pitää avata ui kansiosta ui.py tiedoston kautta. Käyttöliittymässä toimii tällähetkellä kirjautmisnäkymä, siitä siirtyminen vierastilaan ja siellä kurssin ja sähköpostin lisääminen tietokantaan, ja tästä tilasta palaaminen kirjautumisnäkymään
+Ohjelman sisäänkirjautuminen on oletuksena käyttäjänimi admin ja salasana admin. Ohjelmasta puuttuu toiminnallisuus opiskelijoiden lisäämisestä kursseille vielä ja muutama edelliseen näkymään siirtymisnappi.
 
 ### Ohjelman testaus
 Ohjelman testit suoritetaan komennolla
