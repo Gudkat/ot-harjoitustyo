@@ -12,3 +12,5 @@ except FileNotFoundError:
 
 DATABASE_NAME = getenv("DATABASE") or "db.sqlite3"
 DATABASE_PATH = path.join(directory, "data", DATABASE_NAME)
+ADMIN_USERNAME = getenv("ADMIN_USERNAME") or "admin"
+ADMIN_PASSWORD = getenv("ADMIN_PASSWORD") or "admin"

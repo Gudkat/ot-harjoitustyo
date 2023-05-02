@@ -7,6 +7,8 @@ def initialize_database():
     drop_all_tables(connection)
     create_ungrouped_table(connection)
     create_courses_table(connection)
+    create_groups_table(connection)
+    create_participants_table(connection)
     return connection
 
 def drop_all_tables(connection):
@@ -33,7 +35,7 @@ def create_ungrouped_table(connection):
     cursor.execute("""
         CREATE TABLE Ungrouped (
             id INTEGER PRIMARY KEY, 
-            course_id INT, 
+            course_name INT,
             email TEXT);
         """)
 
@@ -68,7 +70,7 @@ def get_courses(connection):
 def add_ungrouped(connection, course, email):
     connection.execute(f"""
         INSERT INTO Ungrouped 
-            (course_id, email) 
+            (course_name, email) 
             VALUES ('{course}', '{email}');
     """)
 
@@ -101,26 +103,18 @@ def remove_ungrouped(connection, table_id):
         WHERE id = {table_id};
     """)
 
-
-def create_course_table(connection, course, *args):
+def create_groups_table(connection):
     cursor = connection.cursor()
-    # try:
-    #     db.execute(f"CREATE TABLE {course} (id INTEGER PRIMARY KEY, course_name TEXT)")
-    #     print("Taulu luotu")
-    # except:
-    #     print("Taulua ei voitu luoda")
-
-    cursor.execute(f"CREATE TABLE {course} (id PRIMARY KEY, course_name TEXT)")
-
-if __name__ == "__main__":
-    # connection = get_connection()
-    # drop_table(connection, "Ungrouped")
-    # add_ungrouped(connection, 1, "esimerkki@domain.com")
-    conn = initialize_database()
-    cursor = conn.cursor()
-    cursor.execute("""
-        SELECT name 
-        FROM sqlite_master 
-        WHERE type='table';
+    cursor.execute(f"""
+        CREATE TABLE Groups (
+            id INTEGER PRIMARY KEY, 
+            course_name TEXT)
     """)
-    print(cursor.fetchall())
+
+def create_participants_table(connection):
+    cursor = connection.cursor()
+    cursor.execute(f"""
+        CREATE TABLE Participants (
+            id INTEGER PRIMARY KEY, 
+            group_id INT)
+    """)

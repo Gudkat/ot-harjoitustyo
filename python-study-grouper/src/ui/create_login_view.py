@@ -2,21 +2,13 @@
 # ChatGPT has been used to debug the code and for checking tkinter syntax
 
 import tkinter
-from os import path as os_path
-from sys import path as sys_path
-from dotenv import load_dotenv
-
-# importing modules is hard. Gotta go ask for help in ws to make this cleaner
-new_path = os_path.dirname((__file__)) + "/../"
-sys_path.append(new_path)
-
-from database_connection import get_connection
+from config import ADMIN_USERNAME, ADMIN_PASSWORD
 
 class LoginView:
-    def __init__(self, root, handle_login_button, handle_guest_button):
+    def __init__(self, root, handle_succesful_login, handle_guest_button):
         self._root = root
         self._frame = None
-        self._handle_login_button = handle_login_button
+        self._handle_succesful_login = handle_succesful_login
         self._handle_guest_button = handle_guest_button
         self._initialize()
 
@@ -68,7 +60,11 @@ class LoginView:
         self._handle_guest_button()
 
     def _get_login_info(self):
-        print(self._username_tb.get(), self._pass_tb.get())
+        if self._username_tb.get() == ADMIN_USERNAME and self._pass_tb.get() == ADMIN_PASSWORD:
+            print("Login succesful")
+            self._handle_succesful_login()
+        else:
+            print("Wrong username or password")
 
     def _create_username_textbox(self):
         self._username_tb = tkinter.Entry(self._frame)
@@ -83,12 +79,12 @@ class LoginView:
         label.grid(row=row, column=0, sticky="w", padx=20, pady=1)
 
 
-def run():
-    root = tkinter.Tk()
-    view = LoginView(root, lambda: print("Login"), lambda: print("Guest"))
-    view.start()
-    view.render()
+# def run():
+#     root = tkinter.Tk()
+#     view = LoginView(root, lambda: print("Login"), lambda: print("Guest"))
+#     view.start()
+#     view.render()
 
 
-if __name__ == "__main__":
-    run()
+# if __name__ == "__main__":
+#     run()
