@@ -3,9 +3,9 @@
 
 from ui.create_login_view import LoginView
 from ui.create_guest_view import FindGroupView
-from ui.create_user_view import UserView
 from ui.create_overview_view import OverviewView
 from ui.create_add_to_group_view import AddToGroupView
+from ui.create_groups_view import GroupsView
 
 class UI:
     def __init__(self, root):
@@ -35,11 +35,6 @@ class UI:
         self._current_view = FindGroupView(self._root, back_button_functionality=self._show_login_view)
         self._current_view.start()
 
-    def _show_user_view(self):
-        self._hide_current_view()
-        self._current_view = UserView(self._root)
-        self._current_view.start()
-
     def _show_overview_view(self):
         self._hide_current_view()
         self._current_view = OverviewView(
@@ -61,7 +56,13 @@ class UI:
 
     def _show_ungrouped_for_specific_group_view(self, course_name, group_id):
         self._hide_current_view()
-        pass
+        self._current_view = GroupsView(
+            self._root,
+            back_button_functionality=self._show_add_to_group_view,
+            course_name=course_name,
+            group_id=group_id
+        )
+        self._current_view.start()
 
     def _handle_course_addition(self):
         self._hide_current_view()

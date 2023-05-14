@@ -116,5 +116,6 @@ def create_participants_table(connection):
     cursor.execute(f"""
         CREATE TABLE Participants (
             id INTEGER PRIMARY KEY, 
-            group_id INT)
+            group_id INT, 
+            email TEXT)
     """)

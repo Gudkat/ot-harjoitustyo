@@ -11,15 +11,14 @@ class AddToGroupView:
         self._frame = None
         self._course_name = course_name
         self._initialize()
-        self._handle_back_button = back_button_functionality
-        self._handle_add_buttob = add_button_functionality
+        self._back_button_functionality = back_button_functionality
+        self._handle_add_button = add_button_functionality
 
     def _initialize(self):
         self._root.title("Study grouper - Add participants to group")
 
     def destroy(self):
-        if self._frame:
-            self._frame.destroy()
+        self._frame.destroy()
         self._frame = None
 
     def start(self):
@@ -30,7 +29,7 @@ class AddToGroupView:
     def _create_frame(self):
         if self._frame:
             self.destroy()
-        self._frame = tkinter.Frame(self._root, borderwidth=2)
+        self._frame = tkinter.Frame(self._root, borderwidth=2, padx=20, pady=20)
 
     def _pack(self):
         self._frame.pack(fill="both", expand=True, side="left")
@@ -39,20 +38,39 @@ class AddToGroupView:
         conn = get_connection()
         groups = _get_groups(conn, self._course_name)
         self._create_title()
+        self._create_back_button()
         self._create_create_new_group_button()
         for i in range(len(groups)):
             how_many = _get_amount_of_participants_in_group(conn, groups[i][0])
-            self._create_label(row=i+2, column=0, text="Amount of participants in group: " + str(how_many))
-            print(groups[i][0])
-            self._create_button(row=i+2, column=1, text="Add", group_id=groups[i][0])
+            self._create_label(row=i+3, column=0, text="Amount of participants in group: " + str(how_many))
+            self._create_button(row=i+3, column=1, text="Add", group_id=groups[i][0])
  
+    def _create_back_button(self):
+        button = tkinter.Button(
+            self._frame, 
+            text="Back", 
+            command=self._handle_back_button
+        )
+        button.grid(
+            row=1,
+            column=0, 
+            columnspan=2, 
+            sticky="ew"
+        )
+
     def _create_title(self):
         title = tkinter.Label(self._frame, text=f"Groups for course {self._course_name}", font=('Arial', 16))
         title.grid(row=0, column=0, sticky="new", columnspan=2)
 
     def _create_create_new_group_button(self):
         button = tkinter.Button(self._frame, text="Create new group", command=self._handle_new_group_button_click)
-        button.grid(row=1, column=0, sticky="ew", columnspan=2)        
+        button.grid(row=2, column=0, sticky="ew", columnspan=2)        
+
+    def _handle_back_button(self):
+        self._back_button_functionality()
+
+    def _handle_add_button_click(self, group_id):
+        self._handle_add_button(self._course_name, group_id)
 
     def _handle_new_group_button_click(self):
         conn = get_connection()
@@ -67,7 +85,3 @@ class AddToGroupView:
     def _create_label(self, row, column=0, text=""):
         label = tkinter.Label(self._frame, text=text)
         label.grid(row=row, column=column, sticky="ew")
-
-    def _handle_add_button_click(self, group_id):
-        pass
-    

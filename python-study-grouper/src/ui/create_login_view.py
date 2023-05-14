@@ -3,6 +3,7 @@
 
 import tkinter
 from config import ADMIN_USERNAME, ADMIN_PASSWORD
+from database_tools.database_commands import _initialize_database
 
 class LoginView:
     def __init__(self, root, handle_succesful_login, handle_guest_button):
@@ -45,18 +46,18 @@ class LoginView:
         self._create_username_textbox()
         self._create_password_textbox()
         self._create_login_button()
+        self._create_initial_database_button()
 
     def _create_login_button(self):
         button = tkinter.Button(self._frame, text="Login", command=self._get_login_info)
         button.grid(row=4, sticky="ew", columnspan=2, pady=20)
 
     def _create_guest_button(self):
-        button = tkinter.Button(self._frame, text="Sign up for a group", height=14, command=self._guest_login)
+        button = tkinter.Button(self._frame, text="Sign up for a group", height=10, command=self._guest_login)
         button.grid(pady=(2,15))
         button.grid(row=0, column=0, columnspan=2, sticky="ew")
 
     def _guest_login(self):
-        print("Guest login")
         self._handle_guest_button()
 
     def _get_login_info(self):
@@ -78,13 +79,10 @@ class LoginView:
         label = tkinter.Label(self._frame, text=text)
         label.grid(row=row, column=0, sticky="w", padx=20, pady=1)
 
-
-# def run():
-#     root = tkinter.Tk()
-#     view = LoginView(root, lambda: print("Login"), lambda: print("Guest"))
-#     view.start()
-#     view.render()
-
-
-# if __name__ == "__main__":
-#     run()
+    def _create_initial_database_button(self):
+        button = tkinter.Button(
+            self._frame, 
+            text="initialize database", 
+            command=_initialize_database
+        )
+        button.grid(columnspan=2)

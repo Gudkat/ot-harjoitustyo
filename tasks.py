@@ -3,10 +3,6 @@ from invoke import task
 
 @task
 def start(ctx):
-    # tää on vähän vaiheessa. Laitoin väliaikasesti alkamaan eriosotteesta noi importit oli vähän vaikeita xD
-    # koitan korjata ens viikoks. 
-
-    # nyt ui lähtee käyntiin kun ajaa ui.py tiedoston ui kansiosta.
     ctx.run("python3 python-study-grouper/src/index.py", pty=True)
 
 @task

@@ -1,5 +1,8 @@
 import sqlite3
+import initialize_database
 
+def _initialize_database():
+    initialize_database.initialize_database()
 
 def _add_course(connection, course_name):
     add = _row_exists(
@@ -50,6 +53,14 @@ def _remove_ungrouped(connection, table_id):
         FROM Ungrouped 
         WHERE id = {table_id};
     """)
+
+def _get_courses(connection):
+    cursor = connection.cursor()
+    cursor.execute("""
+        SELECT course_name
+        FROM Courses;
+    """)
+    return cursor.fetchall()
 
 def _get_ungrouped_by_courses(connection):
     cursor = connection.cursor()
@@ -104,3 +115,27 @@ def _get_amount_of_participants_in_group(connection, group_id):
         WHERE group_id = {group_id};
     """)
     return cursor.fetchone()[0]
+
+def _get_members_of_group(connection, group_id):
+    cursor = connection.cursor()
+    cursor.execute(f"""
+        SELECT *
+        FROM Participants
+        WHERE group_id = {group_id};
+    """)
+    return cursor.fetchall()
+
+def _add_to_group(connection, group_id, email):
+    cursor = connection.cursor()
+    cursor.execute(f"""
+        INSERT INTO Participants
+            (group_id, email)
+            VALUES ({group_id}, '{email}');
+    """)
+
+def _remove_from_group(connection, member_id):
+    cursor = connection.cursor()
+    cursor.execute(f"""
+        DELETE FROM Participants
+        WHERE id = {member_id};
+    """)
