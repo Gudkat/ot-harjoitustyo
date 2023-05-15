@@ -31,11 +31,14 @@ poetry run invoke start
 ### Ohjelman testaus
 Ohjelman testit suoritetaan komennolla
 
+```bash
 poetry run invoke test
+```
 
 ### Testikattavuusraportti
 
 Testikattavuusraportti luodaan komennolla
 
+```bash
 poetry run invoke coverage-report
-
+```
