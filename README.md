@@ -10,16 +10,23 @@
 
 ### Ohjelman asentaminen
 
-Asenna ohjel
+Asenna ohjelman tarvitsemat riippuvuuden komennolla 
 
-### Ohjelman suorittaminen
+```bash
+poetry install
+```
 
 Ensimmäisen käyttökerran yhteydessä käyttäjän tulee alustaa tietokanta graafisen käyttöliittymän kautta painamalla intialize database -nappia. 
 
-Ohjelma käynnistetään komennolla
-poetry run invoke start
-
 Ohjelman sisäänkirjautuminen on oletuksena käyttäjänimi admin ja salasana admin. Nämä voi vaihtaa .env tiedostossa
+
+### Ohjelman suorittaminen
+
+Ohjelma käynnistetään komennolla
+
+```bash
+poetry run invoke start
+```
 
 ### Ohjelman testaus
 Ohjelman testit suoritetaan komennolla
