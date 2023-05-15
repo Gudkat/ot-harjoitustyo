@@ -10,3 +10,6 @@
     
 ## Viikko 6
 - Ohjelmaan lisätty käyttöliittymä ja toiminnallisuus sisäänkirjautuminen adminille minkä kautta pääsee luomaan ryhmiä kurssien perusteella ja lisäämään niihin opiskelijoita.
+
+## Viikko 7
+- Ohjelmaan lisätty käyttöliittymä ja toiminnallisuus opiskelijoiden lisäämiseen ryhmiin. Opiskelijat voi lisätä ryhmiin vain, jos he ovat kurssilla, jolle ryhmä on luotu.

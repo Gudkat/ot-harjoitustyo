@@ -17,5 +17,9 @@
 |18.4.|5|Tkinterin opettelua käyttöliittymän jatkamista|
 |19.4.|5|Importit korjattu, käyttöliittymään lisätty kurssinäkymä kirjautumisen jälkeen ja funktionaalisuus tälle|
 |24.4.|4|Luotu sisäänkirjautumis näkymä ja toiminnallisuus sille|
-|25.4.|5|Luotu näkymä ryhmien luomiselle kursseille|
-|yht.|49|
+|25.4.|5|Luotu näkymä ja toiminnallisuus ryhmien luomiselle kursseille|
+|02.5.|4|Aloitettu näkymän ja toiminnallisuuden luominen opiskelijoiden lisäämiselle ryhmiin|
+|03.5.|2|Jatkettiin ryhmä näkymän luomista|
+|08.5.|2|Opiskelijoiden lisääminen ryhmiin toiminnallisuus valmiiksi ja bugien selvittelyä|
+|09.5.|2|Käyttöliittymän viimeistelyä|
+|yht.|57|
