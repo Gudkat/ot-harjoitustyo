@@ -24,7 +24,6 @@ Sovellus aukeaa kirjautumisnäkymään, josta voi joko kirjautua sisään pääk
 
 - Ohjelmalla on vain yksi käyttäjä, _pääkäyttäjä_, joten tunnusta ei tarvitse luoda vaan se on jo olemassa.
 - _Pääkäyttäjä_ voi kirjautua sisään sovellukseen. 
-- Jos kirjautumistunnukset eivät täsmää, ohjelma ilmoittaa siitä käyttäjälle.
 
 ### Kirjautumisen jälkeen
 
